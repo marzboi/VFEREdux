@@ -1,11 +1,24 @@
-local ISRemoveWeaponUpgrade_performHook = ISRemoveWeaponUpgrade.perform
-function ISRemoveWeaponUpgrade:perform()
-    ISRemoveWeaponUpgrade_performHook(self)
-    VFESetWeaponModel(self.weapon, false)
+require "TimedActions/ISBaseTimedAction"
+
+function FiberglassStock(wielder, weapon)
+    if not weapon or not weapon:IsWeapon() or not weapon:isRanged() then return end
+
+    local baseSprite = weapon:getWeaponSprite()
+
+    baseSprite = string.gsub(baseSprite, "FGS$", "")
+
+    local stock = weapon:getWeaponPart("Stock")
+
+    if stock and string.find(stock:getType(), "FiberglassStock") then
+        weapon:setWeaponSprite(baseSprite .. "FGS")
+    else
+        weapon:setWeaponSprite(baseSprite)
+    end
 end
 
-local ISUpgradeWeapon_performHook = ISUpgradeWeapon.perform
-function ISUpgradeWeapon:perform()
-    ISUpgradeWeapon_performHook(self)
-    VFESetWeaponModel(self.weapon, false)
-end
+Events.OnEquipPrimary.Add(FiberglassStock)
+
+Events.OnGameStart.Add(function()
+    local player = getPlayer()
+    FiberglassStock(player, player:getPrimaryHandItem())
+end)
