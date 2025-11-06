@@ -1,0 +1,18 @@
+module Base
+{
+    craftRecipe Place 7.62 Rounds In Box
+    {
+        timedAction = PlaceAmmoInBox,
+        Time        = 15,
+        category    = Ammunition,
+        Tags        = InHandCraft,
+        inputs
+        {
+            item 20 [Base.762Bullets],
+        }
+        outputs
+        {
+            item 1 Base.762Box,
+        }
+    }
+}

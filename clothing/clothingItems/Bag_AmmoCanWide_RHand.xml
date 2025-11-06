@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<clothingItem>
+	<m_MaleModel>Skinned\BackPacks\AmmoCanWide_RHand</m_MaleModel>
+	<m_FemaleModel>Skinned\BackPacks\AmmoCanWide_RHand</m_FemaleModel>
+	<m_GUID>1afeb87d-08c2-4809-a76d-0bab65378b14</m_GUID>
+	<m_Static>false</m_Static>
+	<m_AllowRandomHue>false</m_AllowRandomHue>
+	<m_AllowRandomTint>false</m_AllowRandomTint>
+	<m_AttachBone></m_AttachBone>
+	<textureChoices>WorldItems\ammoboxwide_texture</textureChoices>
+</clothingItem>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileGuidTable>
+	<files>
+		<path>media/clothing/clothingItems/Bag_AmmoCanNarrow_LHand.xml</path>
+		<guid>4f69f4fb-c483-4c2f-9a6c-95c4efcaa576</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_AmmoCanNarrow_RHand.xml</path>
+		<guid>bd9c4b70-3b0d-4daf-b4f0-a8d59a2c42e3</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_AmmoCanWide_LHand.xml</path>
+		<guid>800d6d6b-af2c-4475-9b23-5832e00e14db</guid>
+	</files>
+	<files>
+		<path>media/clothing/clothingItems/Bag_AmmoCanWide_RHand.xml</path>
+		<guid>1afeb87d-08c2-4809-a76d-0bab65378b14</guid>
+	</files>
+
+</fileGuidTable>
