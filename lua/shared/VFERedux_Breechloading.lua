@@ -1,6 +1,17 @@
 require "TimedActions/ISReloadWeaponAction"
 require "TimedActions/ISRackFirearm"
 
+local ISReloadWeaponAction_stop_old = ISReloadWeaponAction.stop
+function ISReloadWeaponAction:stop()
+    VFESetWeaponModel(self.gun, false)
+    self:setOverrideHandModels(self.gun, nil)
+    self.character:setPrimaryHandItem(self.gun);
+    if self.gun:isTwoHandWeapon() then
+        self.character:setSecondaryHandItem(self.gun);
+    end
+    return ISReloadWeaponAction_stop_old(self)
+end
+
 local ISReloadWeaponAction_animEvent_old = ISReloadWeaponAction.animEvent
 function ISReloadWeaponAction:animEvent(event, parameter)
     if event == 'loadFinished' then
@@ -23,6 +34,17 @@ function ISReloadWeaponAction:animEvent(event, parameter)
     else
         return ISReloadWeaponAction_animEvent_old(self, event, parameter)
     end
+end
+
+local ISRackFirearm_stop_old = ISRackFirearm.stop
+function ISRackFirearm:stop()
+    VFESetWeaponModel(self.gun, false)
+    self:setOverrideHandModels(self.gun, nil)
+    self.character:setPrimaryHandItem(self.gun);
+    if self.gun:isTwoHandWeapon() then
+        self.character:setSecondaryHandItem(self.gun);
+    end
+    return ISRackFirearm_stop_old(self)
 end
 
 local ISRackFirearm_animEvent_old = ISRackFirearm.animEvent

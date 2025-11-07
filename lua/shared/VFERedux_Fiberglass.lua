@@ -1,19 +1,20 @@
-require "TimedActions/ISBaseTimedAction"
+-- local ISUpgradeWeapon_perform_old = ISUpgradeWeapon.perform
+-- function ISUpgradeWeapon:perform()
+--     ISUpgradeWeapon_perform_old(self)
+--     print('UPGRADING')
+--     VFESetWeaponModel(self.weapon, false)
+-- end
+
+-- local ISRemoveWeaponUpgrade_perform_old = ISRemoveWeaponUpgrade.perform
+-- function ISRemoveWeaponUpgrade:perform()
+--     ISRemoveWeaponUpgrade_perform_old(self)
+--     print('DOWNGRADING')
+--     VFESetWeaponModel(self.weapon, false)
+-- end
 
 function FiberglassStock(wielder, weapon)
     if not weapon or not weapon:IsWeapon() or not weapon:isRanged() then return end
-
-    local baseSprite = weapon:getWeaponSprite()
-
-    baseSprite = string.gsub(baseSprite, "FGS$", "")
-
-    local stock = weapon:getWeaponPart("Stock")
-
-    if stock and string.find(stock:getType(), "FiberglassStock") then
-        weapon:setWeaponSprite(baseSprite .. "FGS")
-    else
-        weapon:setWeaponSprite(baseSprite)
-    end
+    VFESetWeaponModel(weapon, false)
 end
 
 Events.OnEquipPrimary.Add(FiberglassStock)

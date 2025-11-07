@@ -1,6 +1,6 @@
 module Base
 {
-	model Tec9
+    model Tec9
     {
         mesh = Weapons/Firearm/tec9NoMag_model,
         texture = Weapons/Firearm/tec9_texture,
@@ -17,7 +17,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-	model Handgun03
+    model Handgun03
     {
         mesh = Weapons/Firearm/Handgun03,
         
@@ -33,7 +33,7 @@ module Base
             rotate = 0.0000 180.0000 0.0000,
         }
     }
-	model M1911
+    model M1911
     {
         mesh = weapons/firearm/m1911_model,
         texture = weapons/firearm/m1911_texture,
@@ -50,7 +50,7 @@ module Base
             rotate = 0.0000 180.0000 0.0000,
         }
     }
-	model MK23SOCOM
+    model MK23SOCOM
     {
         mesh = weapons/firearm/mk23SOCOM_model,
         texture = weapons/firearm/mk23_texture,
@@ -61,7 +61,7 @@ module Base
             rotate = -90.0000 0.0000 0.0000,
         }
     }
-	model Handgun
+    model Handgun
     {
         mesh = Weapons/Firearm/Handgun,
         
@@ -83,7 +83,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-	model Glock17
+    model Glock17
     {
         mesh = weapons/firearm/g17_model,
         texture = weapons/firearm/g17_texture,
@@ -100,7 +100,7 @@ module Base
             rotate = 0.0000 180.0000 0.0000,
         }
     }
-	model P229
+    model P229
     {
         mesh = weapons/firearm/p229_model,
         texture = weapons/firearm/p229_texture,
@@ -117,7 +117,7 @@ module Base
             rotate = 0.0000 180.0000 0.0000,
         }
     }
-	model CZ75
+    model CZ75
     {
         mesh = weapons/firearm/cz75_model,
         texture = weapons/firearm/cz75_texture,
@@ -134,7 +134,7 @@ module Base
             rotate = 0.0000 180.0000 0.0000,
         }
     }
-	model MK2
+    model MK2
     {
         mesh = weapons/firearm/mk2_model,
         texture = weapons/firearm/mk2_texture,
@@ -151,7 +151,7 @@ module Base
             rotate = 0.0000 180.0000 0.0000,
         }
     }
-	model MK2SD
+    model MK2SD
     {
         mesh = weapons/firearm/mk2sd_model,
         texture = weapons/firearm/mk2sd_texture,
@@ -168,7 +168,7 @@ module Base
             rotate = 0.0000 180.0000 0.0000,
         }
     }
-	model Revolver
+    model Revolver
     {
         mesh = Weapons/Firearm/Revolver,
         
@@ -178,7 +178,7 @@ module Base
             rotate = -90.0000 0.0000 0.0000,
         }
     }
-	model Revolver_Short
+    model Revolver_Short
     {
         mesh = Weapons/Firearm/Revolver_Short,
         
@@ -188,20 +188,20 @@ module Base
             rotate = -90.0000 0.0000 0.0000,
         }
     }
-	model Revolver_LongVFE
-	{
-		mesh = Weapons/Firearm/Revolver_Long,
-
-		attachment muzzle
-		{
-			offset = 0.0000 0.2107 -0.0311,
-			rotate = -90.0000 0.0000 0.0000,
-		}
-
-		attachment reddot
-		{
-			offset = -0.0050 0.0440 0.0520,
-			rotate = 0.0000 0.0000 0.0000,
-		}
-	}
+    model Revolver_LongVFE
+    {
+        mesh = Weapons/Firearm/Revolver_Long,
+        
+        attachment muzzle
+        {
+            offset = 0.0000 0.2107 -0.0311,
+            rotate = -90.0000 0.0000 0.0000,
+        }
+        
+        attachment reddot
+        {
+            offset = -0.0050 0.0440 0.0520,
+            rotate = 0.0000 0.0000 0.0000,
+        }
+    }
 }

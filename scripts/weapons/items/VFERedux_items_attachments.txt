@@ -227,7 +227,7 @@ module Base
         Icon             = RifleFibreglassStock,
         Weight           = 1,
         WeightModifier   = -0.4,
-        MountOn          = Shotgun; ShotgunSawnoff; Shotgun2; ShotgunSemi; DoubleBarrelShotgun; DoubleBarrelShotgunSawnoff; M2400_Shotgun; HuntingRifle; VarmintRifle; Mini14; AK47; MAK90; SKS; 1022; AssaultRifle2; LeverRifle; LeverRifle2; CampCarbine,
+        MountOn          = Shotgun; ShotgunSawnoff; Shotgun2; ShotgunSemi; DoubleBarrelShotgun; DoubleBarrelShotgunSawnoff; M2400_Shotgun; M2400_Rifle; HuntingRifle; VarmintRifle; Mini14; AK47; MAK90; SKS; 1022; AssaultRifle2; LeverRifle; LeverRifle2; CampCarbine,
         PartType         = Stock,
         Tooltip          = Tooltip_Sling,
         WorldStaticModel = FiberglassStock_Ground,

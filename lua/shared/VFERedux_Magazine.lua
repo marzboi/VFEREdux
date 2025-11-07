@@ -1,4 +1,3 @@
-require "TimedActions/ISBaseTimedAction"
 local function manageMagazineAttachment(weapon, character, shouldAttach)
 	if not weapon then return end
 
@@ -14,14 +13,17 @@ local function manageMagazineAttachment(weapon, character, shouldAttach)
 		end
 	end
 end
+
+local ISInsertMagazine_complete_old = ISInsertMagazine.complete
 function ISInsertMagazine:complete()
 	manageMagazineAttachment(self.gun, nil, true)
-	return true
+	ISInsertMagazine_complete_old(self)
 end
 
+local ISEjectMagazine_complete_old = ISEjectMagazine.complete
 function ISEjectMagazine:complete()
 	manageMagazineAttachment(self.gun, self.character, false)
-	return true
+	ISEjectMagazine_complete_old(self)
 end
 
 -- local function ISAttachMagazine(wielder, weapon)

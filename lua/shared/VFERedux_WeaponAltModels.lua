@@ -43,11 +43,8 @@ AK47.Name = "Base.AK47"
 AK47.Apply = function(weapon, open)
 	local originalSprite = weapon:getOriginalWeaponSprite()
 	local stock = weapon:getWeaponPart("Stock")
-	if stock ~= nil then
-		print(stock:getType() == "FiberglassStock")
-		if stock:getType() == "FiberglassStock" then
-			originalSprite = originalSprite .. "FGS"
-		end
+	if stock and string.find(stock:getType(), "FiberglassStock") then
+		originalSprite = originalSprite .. "FGS"
 	end
 	weapon:setWeaponSprite(originalSprite)
 end
