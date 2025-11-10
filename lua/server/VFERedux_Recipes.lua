@@ -34,6 +34,9 @@ local function equipWeapon(character, originalWeapon, newWeapon)
 	elseif wasSecondary and not character:getPrimaryHandItem() then
 		character:setPrimaryHandItem(newWeapon)
 	end
+	if newWeapon then
+		VFESetWeaponModel(newWeapon)
+	end
 end
 
 function Recipe.OnCreate.UseWeaponAlternate(craftRecipeData, character)
