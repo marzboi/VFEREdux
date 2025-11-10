@@ -182,29 +182,29 @@ function VFEAltOperation(item, altOperation, target, player)
 		end
 
 		-- Weight conserving attachmant manager ignore if not defined
-		if altOperation.CombinationAmmo ~= nil then
-			-- Remove clip from the weapon so later it doesn't magically come back
-			local clip = item:getWeaponPart("Clip")
-			if clip then
-				item:detachWeaponPart(clip)
-			end
-			local partstring = altOperation.CombinationAmmo[3 - target]
-			local ammoCount = 0
-			local clipString
-			if item:isRoundChambered() then ammoCount = 1 end
-			ammoCount = ammoCount + item:getCurrentAmmoCount()
-			if item:isContainsClip() then
-				clipString = altOperation.CombinationMagazine[3 - target]
-			else
-				clipString =
-				"NoClip"
-			end
-			local stringOutput = partstring .. clipString .. "_" .. ammoCount
-			if ammoCount > 0 or clipString ~= "NoClip" then
-				clip = instanceItem(stringOutput)
-				result:attachWeaponPart(clip)
-			end
-		end
+		-- if altOperation.CombinationAmmo ~= nil then
+		-- 	-- Remove clip from the weapon so later it doesn't magically come back
+		-- 	local clip = item:getWeaponPart("Clip")
+		-- 	if clip then
+		-- 		item:detachWeaponPart(clip)
+		-- 	end
+		-- 	local partstring = altOperation.CombinationAmmo[3 - target]
+		-- 	local ammoCount = 0
+		-- 	local clipString
+		-- 	if item:isRoundChambered() then ammoCount = 1 end
+		-- 	ammoCount = ammoCount + item:getCurrentAmmoCount()
+		-- 	if item:isContainsClip() then
+		-- 		clipString = altOperation.CombinationMagazine[3 - target]
+		-- 	else
+		-- 		clipString =
+		-- 		"NoClip"
+		-- 	end
+		-- 	local stringOutput = partstring .. clipString .. "_" .. ammoCount
+		-- 	if ammoCount > 0 or clipString ~= "NoClip" then
+		-- 		clip = instanceItem(stringOutput)
+		-- 		result:attachWeaponPart(clip)
+		-- 	end
+		-- end
 	else
 		result:setCondition(item:getCondition())
 		result:setHaveBeenRepaired(item:getHaveBeenRepaired())

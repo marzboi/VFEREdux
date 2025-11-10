@@ -878,6 +878,37 @@ module Base
         }
         
     }
+    model AssaultRifleMasterkey
+    {
+        mesh = Weapons/Firearm/AssaultRifleMasterkeyNoMag,
+        texture = Weapons/Firearm/AssaultRifleMasterkey,
+        
+        attachment muzzle
+        {
+            offset = 0.0000 0.4700 0.0515,
+            rotate = -90.0000 0.0000 -180.0000,
+        }
+        attachment reddot
+        {
+            offset = 0.0000 0.0167 0.0900,
+            rotate = 2.0000 0.0000 0.0000,
+        }
+        attachment bulletloops
+        {
+            offset = 0.0017 -0.0006 0.0325,
+            rotate = 2.0000 0.0000 0.0000,
+        }
+        attachment shellholder
+        {
+            offset = 0.0000 -0.0153 0.0434,
+            rotate = 2.0000 0.0000 180.0000,
+        }
+        attachment world
+        {
+            offset = 0.0000 0.1300 0.0000,
+            rotate = 180.0000 0.0000 180.0000,
+        }
+    }
     model AssaultRifleMasterkey_Shotgun
     {
         mesh = Weapons/Firearm/AssaultRifleMasterkeyNoMag,

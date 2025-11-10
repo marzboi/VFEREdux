@@ -993,6 +993,11 @@ module Base
         mesh = weapons/magazines/stanag_magazine,
         texture = Weapons/Firearm/AssaultRifle,
     }
+    model 556_Masterkey_Magazine
+    {
+        mesh = weapons/magazines/stanag_masterkey_magazine,
+        texture = Weapons/Firearm/AssaultRifleMasterkey,
+    }
     model 762_Magazine
     {
         mesh = weapons/magazines/ak47_magazine,

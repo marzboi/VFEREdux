@@ -29,8 +29,8 @@ module Base
         
         attachment laser
         {
-            offset = -0.0007 0.0850 -0.0080,
-            rotate = 0.0000 180.0000 0.0000,
+            offset = 0.0000 0.0850 0.0158,
+            rotate = 0.0000 0.0000 0.0000,
         }
     }
     model M1911
@@ -46,8 +46,8 @@ module Base
         
         attachment laser
         {
-            offset = 0.0000 0.0750 -0.0080,
-            rotate = 0.0000 180.0000 0.0000,
+            offset = 0.0000 0.0750 0.0043,
+            rotate = 0.0000 0.0000 0.0000,
         }
     }
     model MK23SOCOM
