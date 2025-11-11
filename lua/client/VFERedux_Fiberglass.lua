@@ -1,20 +1,21 @@
-local function refreshSpriteNextTick(weapon)
-    local function once()
-        Events.OnTick.Remove(once)
-        VFESetWeaponModel(weapon, false)
-        VFESetWeaponIcon(weapon)
-    end
-    Events.OnTick.Add(once)
+local function modelSetter(weapon)
+    VFESetWeaponModel(weapon, false)
+    VFESetWeaponIcon(weapon)
 end
 
 local ISRemoveWeaponUpgrade_completeHook = ISRemoveWeaponUpgrade.complete
 function ISRemoveWeaponUpgrade:complete()
-    refreshSpriteNextTick(self.weapon)
+    local part = self.weapon:getWeaponPart(self.partType)
+    self.weapon:detachWeaponPart(part)
+
+    modelSetter(self.weapon)
     ISRemoveWeaponUpgrade_completeHook(self)
 end
 
 local ISUpgradeWeapon_completeHook = ISUpgradeWeapon.complete
 function ISUpgradeWeapon:complete()
-    refreshSpriteNextTick(self.weapon)
+    self.weapon:attachWeaponPart(self.part)
+
+    modelSetter(self.weapon)
     ISUpgradeWeapon_completeHook(self)
 end
