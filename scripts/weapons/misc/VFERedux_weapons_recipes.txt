@@ -1,240 +1,144 @@
-// module Base
-// {
-//     craftRecipe Unfold SKS-45 Bayonet
-//     {
-//         timedAction = Making,
-//         OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
-//         Time        = 1,
-//         category    = Weapons,
-//         Tags        = InHandCraft,
-//         inputs
-//         {
-//             item 1 [Base.SKSSpiker] flags[InheritCondition;InheritAmmunition],
-//         }
-//         outputs
-//         {
-//             item 1 Base.SKSSpikerBayonet,
-//         }
-//     }
-
-//     craftRecipe Fold SKS-45 Bayonet
-//     {
-//         timedAction = Making,
-//         Time        = 1,
-//         category    = Weapons,
-//         OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
-//         Tags        = InHandCraft,
-//         inputs
-//         {
-//             item 1 [Base.SKSSpikerBayonet] flags[InheritCondition;InheritAmmunition],
-//         }
-//         outputs
-//         {
-//             item 1 Base.SKSSpiker,
-//         }
-//     }
-
-//     craftRecipe Unfold M60 Bipod
-//     {
-//         timedAction = Making,
-//         OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
-//         Time        = 1,
-//         category    = Weapons,
-//         Tags        = InHandCraft,
-//         inputs
-//         {
-//             item 1 [Base.M60MMG] flags[InheritCondition;InheritAmmunition],
-//         }
-//         outputs
-//         {
-//             item 1 Base.M60MMG_Bipod,
-//         }
-//     }
-
-//     craftRecipe Fold M60 Bipod
-//     {
-//         timedAction = Making,
-//         OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
-//         Time        = 1,
-//         category    = Weapons,
-//         Tags        = InHandCraft,
-//         inputs
-//         {
-//             item 1 [Base.M60MMG_Bipod] flags[InheritCondition;InheritAmmunition],
-//         }
-//         outputs
-//         {
-//             item 1 Base.M60MMG,
-//         }
-//     }
-
-//     craftRecipe Use M2400 Shotgun
-//     {
-//         timedAction = Making,
-//         OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
-//         Time        = 1,
-//         category    = Weapons,
-//         Tags        = InHandCraft,
-//         inputs
-//         {
-//             item 1 [Base.M2400_Rifle] flags[InheritCondition;InheritAmmunition],
-//         }
-//         outputs
-//         {
-//             item 1 Base.M2400_Shotgun,
-//         }
-//     }
-
-//     craftRecipe Use M2400 Rifle
-//     {
-//         timedAction = Making,
-//         OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
-//         Time        = 1,
-//         category    = Weapons,
-//         Tags        = InHandCraft,
-//         inputs
-//         {
-//             item 1 [Base.M2400_Shotgun] flags[InheritCondition;InheritAmmunition],
-//         }
-//         outputs
-//         {
-//             item 1 Base.M2400_Rifle,
-//         }
-//     }
-
-//     craftRecipe Unfold AK-47 Stock
-//     {
-//         timedAction = Making,
-//         OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
-//         Time        = 1,
-//         category    = Weapons,
-//         Tags        = InHandCraft,
-//         inputs
-//         {
-//             item 1 [Base.AK47Folded] flags[InheritCondition;InheritAmmunition],
-//         }
-//         outputs
-//         {
-//             item 1 Base.AK47Unfolded,
-//         }
-//     }
-
-//     craftRecipe Fold AK-47 Stock
-//     {
-//         timedAction = Making,
-//         OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
-//         Time        = 1,
-//         category    = Weapons,
-//         Tags        = InHandCraft,
-//         inputs
-//         {
-//             item 1 [Base.AK47Unfolded] flags[InheritCondition;InheritAmmunition],
-//         }
-//         outputs
-//         {
-//             item 1 Base.AK47Folded,
-//         }
-//     }
-
-//     craftRecipe Unfold CAR-15 Stock
-//     {
-//         timedAction = Making,
-//         OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
-//         Time        = 1,
-//         category    = Weapons,
-//         Tags        = InHandCraft,
-//         inputs
-//         {
-//             item 1 [Base.CAR15Folded] flags[InheritCondition;InheritAmmunition],
-//         }
-//         outputs
-//         {
-//             item 1 Base.CAR15,
-//         }
-//     }
-
-//     craftRecipe Fold CAR-15 Stock
-//     {
-//         timedAction = Making,
-//         OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
-//         Time        = 1,
-//         category    = Weapons,
-//         Tags        = InHandCraft,
-//         inputs
-//         {
-//             item 1 [Base.CAR15] flags[InheritCondition;InheritAmmunition],
-//         }
-//         outputs
-//         {
-//             item 1 Base.CAR15Folded,
-//         }
-//     }
-
-//     craftRecipe Unfold CAR-15D Stock
-//     {
-//         timedAction = Making,
-//         OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
-//         Time        = 1,
-//         category    = Weapons,
-//         Tags        = InHandCraft,
-//         inputs
-//         {
-//             item 1 [Base.CAR15DFolded] flags[InheritCondition;InheritAmmunition],
-//         }
-//         outputs
-//         {
-//             item 1 Base.CAR15D,
-//         }
-//     }
-
-//     craftRecipe Fold CAR-15D Stock
-//     {
-//         timedAction = Making,
-//         OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
-//         Time        = 1,
-//         category    = Weapons,
-//         Tags        = InHandCraft,
-//         inputs
-//         {
-//             item 1 [Base.CAR15D] flags[InheritCondition;InheritAmmunition],
-//         }
-//         outputs
-//         {
-//             item 1 Base.CAR15DFolded,
-//         }
-//     }
-
-//     craftRecipe Unfold Mini-14 Stock
-//     {
-//         timedAction = Making,
-//         OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
-//         Time        = 1,
-//         category    = Weapons,
-//         Tags        = InHandCraft,
-//         inputs
-//         {
-//             item 1 [Base.Mini14Folded] flags[InheritCondition;InheritAmmunition],
-//         }
-//         outputs
-//         {
-//             item 1 Base.Mini14Unfolded,
-//         }
-//     }
-
-//     craftRecipe Fold Mini-14 Stock
-//     {
-//         timedAction = Making,
-//         OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
-//         Time        = 1,
-//         category    = Weapons,
-//         Tags        = InHandCraft,
-//         inputs
-//         {
-//             item 1 [Base.Mini14Unfolded] flags[InheritCondition;InheritAmmunition],
-//         }
-//         outputs
-//         {
-//             item 1 Base.Mini14Folded,
-//         }
-//     }
-// }
+module Base
+{
+    craftRecipe Saw Off Shotgun Stock
+    {
+        timedAction = SawSmallItemMetal,
+        OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
+        Time        = 200,
+        category    = Weapons,
+        Tags        = InHandCraft;CanBeDoneFromFloor,
+        inputs
+        {
+            item 1 [Base.ShotgunSawnoff] flags[InheritCondition;InheritAmmunition],
+            item 1 tags[Saw] mode:keep flags[MayDegradeLight;Prop1],
+        }
+        outputs
+        {
+            item 1 Base.ShotgunSawnoffNoStock,
+        }
+    }
+    
+    craftRecipe Saw Off Double Barrel Shotgun Stock
+    {
+        timedAction = SawSmallItemMetal,
+        OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
+        Time        = 200,
+        category    = Weapons,
+        Tags        = InHandCraft;CanBeDoneFromFloor,
+        inputs
+        {
+            item 1 [Base.DoubleBarrelShotgunSawnoff] flags[InheritCondition;InheritAmmunition],
+            item 1 tags[Saw] mode:keep flags[MayDegradeLight;Prop1],
+        }
+        outputs
+        {
+            item 1 Base.DoubleBarrelShotgunSawnoffNoStock,
+        }
+    }
+    
+    craftRecipe Saw Off Shotgun
+    {
+        timedAction = SawSmallItemMetal,
+        OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
+        Time        = 200,
+        category    = Weapons,
+        Tags        = InHandCraft;CanBeDoneFromFloor,
+        inputs
+        {
+            item 1 [Base.Shotgun] flags[InheritCondition;InheritAmmunition],
+            item 1 tags[Saw] mode:keep flags[MayDegradeLight;Prop1],
+        }
+        outputs
+        {
+            item 1 Base.ShotgunSawnoff,
+        }
+    }
+    
+    craftRecipe Saw Off Double Barrel Shotgun
+    {
+        timedAction = SawSmallItemMetal,
+        OnCreate    = Recipe.OnCreate.UseWeaponAlternate,
+        Time        = 200,
+        category    = Weapons,
+        Tags        = InHandCraft;CanBeDoneFromFloor,
+        inputs
+        {
+            item 1 [Base.DoubleBarrelShotgunSawnoff] flags[InheritCondition;InheritAmmunition],
+            item 1 tags[Saw] mode:keep flags[MayDegradeLight;Prop1],
+        }
+        outputs
+        {
+            item 1 Base.ShotgunSawnoff,
+        }
+    }
+    
+    craftRecipe Couple 5.56 Magazines
+    {
+        timedAction = Making,
+        OnCreate    = Recipe.OnCreate.KeepAmmoMagazines,
+        Time        = 50,
+        category    = Weapons,
+        Tags        = InHandCraft,
+        inputs
+        {
+            item 2 [Base.556Clip] flags[InheritAmmunition],
+            item 1 [DuctTape],
+        }
+        outputs
+        {
+            item 1 Base.Coupled556,
+        }
+    }
+    
+    craftRecipe Separate 5.56 Magazines
+    {
+        timedAction = RipClothing,
+        Time        = 50,
+        category    = Weapons,
+        Tags        = InHandCraft,
+        inputs
+        {
+            item 1 [Base.Coupled556],
+        }
+        outputs
+        {
+            item 2 Base.556Clip,
+        }
+    }
+    
+    craftRecipe Couple 7.62 Magazines
+    {
+        timedAction = Making,
+        OnCreate    = Recipe.OnCreate.KeepAmmoMagazines,
+        Time        = 50,
+        category    = Weapons,
+        Tags        = InHandCraft,
+        inputs
+        {
+            item 2 [Base.762Clip] flags[InheritAmmunition],
+            item 1 [DuctTape],
+        }
+        outputs
+        {
+            item 1 Base.Coupled762,
+        }
+    }
+    
+    craftRecipe Separate 7.62 Magazines
+    {
+        timedAction = RipClothing,
+        Time        = 50,
+        category    = Weapons,
+        Tags        = InHandCraft,
+        inputs
+        {
+            item 1 [Base.Coupled762],
+        }
+        outputs
+        {
+            item 2 Base.762Clip,
+        }
+    }
+    
+    craftRecipe
+}

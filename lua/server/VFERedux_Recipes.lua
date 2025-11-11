@@ -53,3 +53,20 @@ function Recipe.OnCreate.UseWeaponAlternate(craftRecipeData, character)
 		end
 	end
 end
+
+function Recipe.OnCreate.KeepAmmoMagazines(craftRecipeData, character)
+	local bullets = 0
+	local ammo
+	local item
+	item = craftRecipeData:getAllConsumedItems():get(0)
+	ammo = item:getAmmoType()
+	bullets = bullets + item:getCurrentAmmoCount()
+
+	item = craftRecipeData:getAllConsumedItems():get(2)
+	bullets = bullets + item:getCurrentAmmoCount()
+
+	for i = 0, bullets - 1 do
+		local newBullet = instanceItem(ammo)
+		character:getInventory():AddItem(newBullet)
+	end
+end
