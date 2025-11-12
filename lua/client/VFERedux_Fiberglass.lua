@@ -6,7 +6,10 @@ end
 local ISRemoveWeaponUpgrade_completeHook = ISRemoveWeaponUpgrade.complete
 function ISRemoveWeaponUpgrade:complete()
     local part = self.weapon:getWeaponPart(self.partType)
-    self.weapon:detachWeaponPart(part)
+
+    if part and part:getFullType() == "Base.FiberglassStock" then
+        self.weapon:detachWeaponPart(part)
+    end
 
     modelSetter(self.weapon)
     ISRemoveWeaponUpgrade_completeHook(self)
@@ -14,7 +17,11 @@ end
 
 local ISUpgradeWeapon_completeHook = ISUpgradeWeapon.complete
 function ISUpgradeWeapon:complete()
-    self.weapon:attachWeaponPart(self.part)
+    local part = self.part
+
+    if part and part:getFullType() == "Base.FiberglassStock" then
+        self.weapon:attachWeaponPart(part)
+    end
 
     modelSetter(self.weapon)
     ISUpgradeWeapon_completeHook(self)

@@ -99,6 +99,35 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
+    model Shotgun2FGS
+    {
+        mesh = Weapons/Firearm/Shotgun2,
+        texture = weapons/firearm/Shotgunfiberglass_texture,
+        
+        attachment muzzle
+        {
+            offset = 0.0000 0.4638 0.0255,
+            rotate = -90.0000 0.0000 -180.0000,
+        }
+        
+        attachment world
+        {
+            offset = 0.0000 0.1660 0.0000,
+            rotate = -180.0000 1.0000 -180.0000,
+        }
+        
+        attachment choketube
+        {
+            offset = 0.0000 0.4632 0.0255,
+            rotate = 0.0000 0.0000 0.0000,
+        }
+        
+        attachment shellholder
+        {
+            offset = 0.0000 0.0000 0.0000,
+            rotate = 0.0000 0.0000 0.0000,
+        }
+    }
     model Shotgun2M9
     {
         mesh = Weapons/Firearm/Shotgun2M9,

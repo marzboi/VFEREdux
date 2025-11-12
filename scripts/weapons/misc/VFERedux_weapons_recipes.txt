@@ -139,6 +139,4 @@ module Base
             item 2 Base.762Clip,
         }
     }
-    
-    craftRecipe
 }
