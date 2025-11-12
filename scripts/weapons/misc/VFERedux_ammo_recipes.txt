@@ -1,5 +1,21 @@
 module Base
 {
+    craftRecipe Open Box of 7.62 Ammo
+    {
+        timedAction = OpenAmmoBox,
+        Time        = 15,
+        category    = Ammunition,
+        Tags        = InHandCraft,
+        inputs
+        {
+            item 1 [Base.762Box],
+        }
+        outputs
+        {
+            item 20 Base.762Bullets,
+        }
+    }
+    
     craftRecipe Place 7.62 Rounds In Box
     {
         timedAction = PlaceAmmoInBox,
@@ -13,6 +29,38 @@ module Base
         outputs
         {
             item 1 Base.762Box,
+        }
+    }
+    
+    craftRecipe Open Box of .22 Ammo
+    {
+        timedAction = OpenAmmoBox,
+        Time        = 15,
+        category    = Ammunition,
+        Tags        = InHandCraft,
+        inputs
+        {
+            item 1 [Base.22Box],
+        }
+        outputs
+        {
+            item 10 Base.22Bullets,
+        }
+    }
+    
+    craftRecipe Place .22 Rounds In Box
+    {
+        timedAction = PlaceAmmoInBox,
+        Time        = 15,
+        category    = Ammunition,
+        Tags        = InHandCraft,
+        inputs
+        {
+            item 10 [Base.22Bullets],
+        }
+        outputs
+        {
+            item 1 Base.22Box,
         }
     }
 }

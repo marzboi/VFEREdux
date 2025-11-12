@@ -481,7 +481,7 @@ module Base
         
         attachment muzzle
         {
-            offset = 0.0000 -0.465 0.0255,
+            offset = 0.0000 0.4320 0.0255,
             rotate = -90.0000 0.0000 -180.0000,
         }
         
@@ -493,7 +493,7 @@ module Base
         
         attachment choketube
         {
-            offset = 0.0000 -0.4930 0.0320,
+            offset = 0.0000 0.4930 0.0320,
             rotate = 180.0000 0.0000 -180.0000,
         }
         
