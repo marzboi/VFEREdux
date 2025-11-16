@@ -1,0 +1,48 @@
+VERSION = 1,
+option VFE.PoliceWeapons {
+	type = boolean,
+	default = true,
+	page = VFE,
+	translation = VFE_PoliceWeapons,
+}
+option VFE.MilitaryWeapons {
+	type = boolean,
+	default = true,
+	page = VFE,
+	translation = VFE_MilitaryWeapons,
+}
+option VFE.SurvivorWeapons {
+	type = boolean,
+	default = true,
+	page = VFE,
+	translation = VFE_SurvivorWeapons,
+}
+option VFE.OtherWeapons {
+	type = boolean,
+	default = true,
+	page = VFE,
+	translation = VFE_OtherWeapons,
+}
+option VFE.CarWeapons {
+	type = boolean,
+	default = true,
+	page = VFE,
+	translation = VFE_CarWeapons,
+}
+option VFE.HouseWeapons {
+	type = boolean,
+	default = true,
+	page = VFE,
+	translation = VFE_HouseWeapons,
+}
+option VFE.HouseWeaponsMulti {
+	type = double, min = 0.1, max= 10, default = 1.0,
+	page = VFE,
+	translation = VFE_HouseWeaponsMulti,
+}
+option VFE.HeavyWeapons {
+	type = boolean,
+	default = true,
+	page = VFE,
+	translation = VFE_HeavyWeapons,
+}

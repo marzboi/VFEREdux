@@ -233,7 +233,7 @@ function VFEAltOperation(item, altOperation, target, player)
 	local canon = item:getWeaponPart("Canon")
 	local stock = item:getWeaponPart("Stock")
 	local pad = item:getWeaponPart("RecoilPad")
-	local JungleMag = item:getWeaponPart("jungleMag")
+	local JungleMag = item:getWeaponPart("JungleMag")
 	local Bipod = item:getWeaponPart("Bipod")
 	if scope then
 		result:attachWeaponPart(scope)

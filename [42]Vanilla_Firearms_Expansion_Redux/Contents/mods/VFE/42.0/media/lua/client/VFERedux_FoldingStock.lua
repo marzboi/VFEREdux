@@ -138,7 +138,7 @@ function VFEFoldingStock(item, newWeapIndex, player)
 		local sling = item:getWeaponPart("Sling")
 		local canon = item:getWeaponPart("Canon")
 		local stock = item:getWeaponPart("Stock")
-		local JungleMag = item:getWeaponPart("jungleMag")
+		local JungleMag = item:getWeaponPart("JungleMag")
 		local pad = item:getWeaponPart("RecoilPad")
 		local Bipod = item:getWeaponPart("Bipod")
 

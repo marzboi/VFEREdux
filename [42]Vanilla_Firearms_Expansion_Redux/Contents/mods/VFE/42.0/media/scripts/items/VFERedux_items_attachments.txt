@@ -396,7 +396,7 @@ module Base
         Weight             = 0.5,
         WeightModifier     = 0.5,
         ReloadTimeModifier = -10,
-        MountOn            = AK47; AK47Unfolded; MAK90,
+        MountOn            = AK47;AK47Unfolded;AK47Folded;MAK90,
         PartType           = JungleMag,
         Tooltip            = Tooltip_AmmoStrap,
         WorldStaticModel   = Coupled762_Ground,
