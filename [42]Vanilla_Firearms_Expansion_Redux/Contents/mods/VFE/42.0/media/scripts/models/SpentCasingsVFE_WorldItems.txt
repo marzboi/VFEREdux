@@ -1,0 +1,199 @@
+module Base
+{
+    /*-----Base game calibers-----*/
+    item Bullets9mm_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.01,
+        Type             = Normal,
+        DisplayName      = 9mm Casing,
+        DisplayCategory  = Casings,
+        Icon             = 9mm_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_PistolShortSmall,
+        WorldStaticModel = Spent_PistolShortSmall,
+    }
+    item Bullets45_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.015,
+        Type             = Normal,
+        DisplayName      = .45 Auto Casing,
+        DisplayCategory  = Casings,
+        Icon             = 45_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_PistolShort,
+        WorldStaticModel = Spent_PistolShort,
+    }
+    item Bullets44_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.015,
+        Type             = Normal,
+        DisplayName      = .44 Magnum Casing,
+        DisplayCategory  = Casings,
+        Icon             = 44_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_PistolLong,
+        WorldStaticModel = Spent_PistolLong,
+    }
+    item Bullets38_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.01,
+        Type             = Normal,
+        DisplayName      = .38 Special Casing,
+        DisplayCategory  = Casings,
+        Icon             = 38_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_PistolLong,
+        WorldStaticModel = Spent_PistolLong,
+    }
+    item 308Bullets_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.015,
+        Type             = Normal,
+        DisplayName      = .308 Casing,
+        DisplayCategory  = Casings,
+        Icon             = 308_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_RifleLong,
+        WorldStaticModel = Spent_RifleLong,
+    }
+    item 223Bullets_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.015,
+        Type             = Normal,
+        DisplayName      = .223 Casing,
+        DisplayCategory  = Casings,
+        Icon             = 223_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_RifleShort,
+        WorldStaticModel = Spent_RifleShort,
+    }
+    item 556Bullets_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.02,
+        Type             = Normal,
+        DisplayName      = 5.56mm Casing,
+        DisplayCategory  = Casings,
+        Icon             = 556_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_RifleLong,
+        WorldStaticModel = Spent_RifleLong,
+    }
+    item ShotgunShells_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.05,
+        Type             = Normal,
+        DisplayName      = Empty Shotgun Shell,
+        DisplayCategory  = Casings,
+        Icon             = ShotgunShells_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_Shell,
+        WorldStaticModel = Spent_Shell,
+    }
+    /*-----VFE calibers-----*/
+    item 22Bullets_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.01,
+        Type             = Normal,
+        DisplayName      = .22 Casing,
+        DisplayCategory  = Casings,
+        Icon             = 22_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_PistolLongSmall,
+        WorldStaticModel = Spent_PistolLongSmall,
+    }
+    item 762Bullets_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.02,
+        Type             = Normal,
+        DisplayName      = 7.62 Casing,
+        DisplayCategory  = Casings,
+        Icon             = 762_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_VFE_762,
+        WorldStaticModel = Spent_VFE_762,
+    }
+    item 545Bullets_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.02,
+        Type             = Normal,
+        DisplayName      = 5.45 Casing,
+        DisplayCategory  = Casings,
+        Icon             = 545_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_VFE_545,
+        WorldStaticModel = Spent_VFE_545,
+    }
+    item 46Bullets_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.02,
+        Type             = Normal,
+        DisplayName      = 4.6 Casing,
+        DisplayCategory  = Casings,
+        Icon             = 46Bullets_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_RifleShort,
+        WorldStaticModel = Spent_RifleShort,
+    }
+    item 57Bullets_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.01,
+        Type             = Normal,
+        DisplayName      = 5.7 Casing,
+        DisplayCategory  = Casings,
+        Icon             = 57Bullets_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_PistolLong,
+        WorldStaticModel = Spent_PistolLong,
+    }
+    /*-----Additional Firearms R calibers-----*/
+    item Bullets57_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.01,
+        Type             = Normal,
+        DisplayName      = 5.7x28mm Casing,
+        DisplayCategory  = Casings,
+        Icon             = 22_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_PistolLong,
+        WorldStaticModel = Spent_PistolLong,
+    }
+    item 762x51Bullets_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.02,
+        Type             = Normal,
+        DisplayName      = 7.62x51mm Casing,
+        DisplayCategory  = Casings,
+        Icon             = 223_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_RifleLong,
+        WorldStaticModel = Spent_RifleLong,
+    }
+    /*-----Gunrunner's Weapon Pack calibers-----*/
+    item 357Bullets_Casing
+    {
+        CanStack         = TRUE,
+        Weight           = 0.015,
+        Type             = Normal,
+        DisplayName      = .357 Magnum Casing,
+        DisplayCategory  = Casings,
+        Icon             = 44_Casing,
+        MetalValue       = 1,
+        StaticModel      = Spent_PistolLong,
+        WorldStaticModel = Spent_PistolLong,
+    }
+}
