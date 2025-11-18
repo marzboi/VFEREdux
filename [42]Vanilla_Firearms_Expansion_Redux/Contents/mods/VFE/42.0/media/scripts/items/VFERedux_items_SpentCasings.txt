@@ -158,7 +158,7 @@ module Base
         StaticModel      = Spent_PistolLong,
         WorldStaticModel = Spent_PistolLong,
     }
-    /*-----Additional Firearms R calibers-----*/
+    
     item Bullets57_Casing
     {
         CanStack         = TRUE,
@@ -183,7 +183,7 @@ module Base
         StaticModel      = Spent_RifleLong,
         WorldStaticModel = Spent_RifleLong,
     }
-    /*-----Gunrunner's Weapon Pack calibers-----*/
+    
     item 357Bullets_Casing
     {
         CanStack         = TRUE,
