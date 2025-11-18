@@ -94,69 +94,77 @@ function SpentCasingPhysics.update()
     end
 end
 
+local function doSpawnCasing(playerObj, weapon, opts)
+    if not playerObj or playerObj:isDead() then return end
+    if not weapon or not weapon:isRanged() then return end
+
+    opts = opts or {}
+    local forwardOffset = opts.forwardOffset or 0.28
+    local sideOffset = opts.sideOffset or 0.25
+    local random_f = newrandom()
+
+    local gunAmmo, replaced = string.gsub(weapon:getAmmoType() or "", "Base.", "")
+    if gunAmmo == "" then return end
+    local casingType = "Base." .. gunAmmo .. "_Casing"
+
+    local px, py, pz = playerObj:getX(), playerObj:getY(), playerObj:getZ()
+
+    local angleDeg = playerObj:getDirectionAngle() or 0
+    local angle = math.rad(angleDeg)
+
+    local fx = math.cos(angle)
+    local fy = math.sin(angle)
+    local rx = math.cos(angle + math.pi / 2)
+    local ry = math.sin(angle + math.pi / 2)
+
+    local spawnWorldX = px + fx * forwardOffset + rx * sideOffset
+    local spawnWorldY = py + fy * forwardOffset + ry * sideOffset
+    local spawnWorldZ = 0.5
+
+    local targetTileX = math.floor(spawnWorldX)
+    local targetTileY = math.floor(spawnWorldY)
+    local targetSquare = getCell():getGridSquare(targetTileX, targetTileY, pz)
+    if not targetSquare then
+        targetSquare = playerObj:getCurrentSquare()
+        if not targetSquare then return end
+    end
+
+    local startX = spawnWorldX - targetSquare:getX()
+    local startY = spawnWorldY - targetSquare:getY()
+    local startZ = spawnWorldZ
+
+    local velX = (random_f:random(10) - 5) / 200
+    local velY = (random_f:random(10) - 5) / 200
+    local velZ = (random_f:random(10) + 15) / 200
+
+    SpentCasingPhysics.addCasing(targetSquare, casingType, startX, startY, startZ, velX, velY, velZ)
+end
+
 local function SpawnCasing(playerObj, weapon)
     if not playerObj or playerObj:isDead() then return end
     if not weapon then return end
     if not weapon:isRanged() then return end
 
-    if weapon:getWeaponReloadType() == "revolver"
-        or weapon:getWeaponReloadType() == "doublebarrelshotgun"
-        or weapon:getWeaponReloadType() == "doublebarrelshotgunsawn"
-        or weapon:getWeaponReloadType() == "breechloader"
-    then
-        return
-    end
-
-    local gunAmmo, replaced = string.gsub(weapon:getAmmoType(), "Base.", "")
+    if weapon:getWeaponReloadType() == "revolver" or weapon:getWeaponReloadType() == "doublebarrelshotgun" or weapon:getWeaponReloadType() == "doublebarrelshotgunsawn" then return end
 
     if weapon and weapon:isRanged() and weapon:getCurrentAmmoCount() > 0 and not weapon:isRackAfterShoot() then
-        local random_f = newrandom()
-        local square = playerObj:getCurrentSquare()
-        if not square then return end
-
-        local casingType = "Base." .. gunAmmo .. "_Casing"
-
-        local px, py, pz = playerObj:getX(), playerObj:getY(), playerObj:getZ()
-
-        local angleDeg = playerObj:getDirectionAngle() or 0
-        local angle = math.rad(angleDeg)
-
-        local fx = math.cos(angle)
-        local fy = math.sin(angle)
-
-        local rx = math.cos(angle + math.pi / 2)
-        local ry = math.sin(angle + math.pi / 2)
-
-        local forwardOffset = 0.30
-        local sideOffset = 0.25
-
-        local spawnWorldX = px + fx * forwardOffset + rx * sideOffset
-        local spawnWorldY = py + fy * forwardOffset + ry * sideOffset
-        local spawnWorldZ = 0.6
-
-        local targetTileX = math.floor(spawnWorldX)
-        local targetTileY = math.floor(spawnWorldY)
-        local targetSquare = getCell():getGridSquare(targetTileX, targetTileY, pz)
-        if not targetSquare then
-            targetSquare = playerObj:getCurrentSquare()
-        end
-
-        local startX = spawnWorldX - targetSquare:getX()
-        local startY = spawnWorldY - targetSquare:getY()
-        local startZ = spawnWorldZ
-
-        local velX = (random_f:random(10) - 5) / 200
-        local velY = (random_f:random(10) - 5) / 200
-        local velZ = (random_f:random(10) + 15) / 200
-
-        SpentCasingPhysics.addCasing(targetSquare, casingType, startX, startY, startZ, velX, velY, velZ)
+        doSpawnCasing(playerObj, weapon)
     end
 end
 
-local ISRackFirearm_complete_old = ISRackFirearm.complete
-function ISRackFirearm:complete()
-    ---- Here
-    ISRackFirearm_complete_old(self)
+local ISRackFirearm_perform_old = ISRackFirearm.perform
+function ISRackFirearm:perform()
+    local player = self.character
+    local weapon = self.gun
+
+    if player and weapon then
+        local rackingOpts = {
+            forwardOffset = 0.30,
+            sideOffset = 0.10,
+        }
+        doSpawnCasing(player, weapon, rackingOpts)
+    end
+    ISRackFirearm_perform_old(self)
 end
 
 Events.OnWeaponSwing.Add(SpawnCasing)

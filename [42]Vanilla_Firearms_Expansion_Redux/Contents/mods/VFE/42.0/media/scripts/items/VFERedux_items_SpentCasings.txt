@@ -97,7 +97,6 @@ module Base
         StaticModel      = Spent_Shell,
         WorldStaticModel = Spent_Shell,
     }
-    /*-----VFE calibers-----*/
     item 22Bullets_Casing
     {
         CanStack         = TRUE,

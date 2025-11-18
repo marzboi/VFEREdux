@@ -5,6 +5,8 @@ IGUI_EN = {
     IGUI_FirearmRadial_UseBayonet = "Use Bayonet",
     IGUI_FirearmRadial_UseRifle = "Use Gun",
     
+    IGUI_ItemCat_Casings = "Spent Casings",
+    
     IGUI_ContextMenu_MoveToInv = "Move into main inventory or equip",
     
     IGUI_ContextMenu_FoldStockArg = "Fold %1 Stock",
