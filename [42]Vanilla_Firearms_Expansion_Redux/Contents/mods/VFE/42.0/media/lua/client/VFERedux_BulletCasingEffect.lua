@@ -4,6 +4,12 @@ SpentCasingPhysics = {}
 SpentCasingPhysics.activeCasings = {}
 SpentCasingPhysics.GRAVITY = 0.005
 local random_f = newrandom()
+local XY_STEP = 0.10           -- multiply X/Y velocity by this when adding to position (small step)
+local Z_STEP = 0.05            -- multiply Z velocity by this when adding to position (small step)
+local GRAVITY_SCALE = 1.0      -- scale for the global gravity (keeps existing constant but allows easy tweak)
+local DRAG_XY = 0.97           -- velocity damping for horizontal movement ("air resistance")
+local DRAG_Z = 0.995           -- velocity damping for vertical movement
+local SETTLE_THRESHOLD = 0.001 -- when velocities drop below this, consider the casing settled
 
 function SpentCasingPhysics.addCasing(square, casingType, startX, startY, startZ, velocityX, velocityY, velocityZ)
     if not square then return end
@@ -28,13 +34,6 @@ end
 
 function SpentCasingPhysics.update()
     local i = 1
-
-    local XY_STEP = 0.10           -- multiply X/Y velocity by this when adding to position (small step)
-    local Z_STEP = 0.05            -- multiply Z velocity by this when adding to position (small step)
-    local GRAVITY_SCALE = 1.0      -- scale for the global gravity (keeps existing constant but allows easy tweak)
-    local DRAG_XY = 0.97           -- velocity damping for horizontal movement ("air resistance")
-    local DRAG_Z = 0.995           -- velocity damping for vertical movement
-    local SETTLE_THRESHOLD = 0.001 -- when velocities drop below this, consider the casing settled
 
     while i <= #SpentCasingPhysics.activeCasings do
         local casing = SpentCasingPhysics.activeCasings[i]
@@ -121,23 +120,26 @@ function SpentCasingPhysics.update()
     end
 end
 
+-- leaving this here until I figure a way to use attachment position to spawn the casingType/Bullet
 -- local function checkModel(weapon)
 --     if not weapon then return end
 --     local weaponModel = ScriptManager.instance:getModelScript(weapon:getOriginalWeaponSprite())
---     if weapon then print(weaponModel) end
-
 --     for i = 0, weaponModel:getAttachmentCount() - 1 do
 --         local partList = weaponModel:getAttachment(i)
 --         if partList:getId() == "ejectionport" then
---             print(partList:getOffset())
---             print(partList:getRotate())
+--             local partOffset = partList:getOffset()
+--             print(partOffset:get(0))
+--             print(partOffset:get(1))
+--             print(partOffset:get(2))
 --         end
 --     end
 -- end
 
-local function doSpawnCasing(player, weapon, params)
+local function doSpawnCasing(player, params)
     local forwardOffset = params.forwardOffset or 0.0
     local sideOffset = params.sideOffset or 0.0
+    local heightOffset = params.heightOffset or 0.5
+    local shellForce = params.shellForce or 0.0
     local casingType = params.spentCasing
 
     if not casingType then return end
@@ -154,7 +156,6 @@ local function doSpawnCasing(player, weapon, params)
 
     local spawnWorldX = px + fx * forwardOffset + rx * sideOffset
     local spawnWorldY = py + fy * forwardOffset + ry * sideOffset
-    local spawnWorldZ = 0.5
 
     local targetTileX = math.floor(spawnWorldX)
     local targetTileY = math.floor(spawnWorldY)
@@ -166,36 +167,32 @@ local function doSpawnCasing(player, weapon, params)
 
     local startX = spawnWorldX - targetSquare:getX()
     local startY = spawnWorldY - targetSquare:getY()
-    local startZ = spawnWorldZ
+    local startZ = heightOffset
 
     local velX = (random_f:random(10) - 5) / 200
     local velY = (random_f:random(10) - 5) / 200
     local velZ = (random_f:random(10) + 25) / 200
 
+    velX = velX + rx * shellForce
+    velY = velY + ry * shellForce
+
     SpentCasingPhysics.addCasing(targetSquare, casingType, startX, startY, startZ, velX, velY, velZ)
 end
 
-local function spawnCasing(player, weapon, params)
+
+local function spawnCasing(player, weapon)
     if not player or player:isDead() then return end
     if not weapon then return end
+
+    local params = WeaponEjectionPortList[weapon:getFullType()]
     if not params then return end
 
+    if params.manualEjection then return end
+
     if weapon:getCurrentAmmoCount() > 0 then
-        doSpawnCasing(player, weapon, params)
+        doSpawnCasing(player, params)
     end
 end
 
--- local ISRackFirearm_perform_old = ISRackFirearm.perform
--- function ISRackFirearm:perform()
---     local player = self.character
---     local weapon = self.gun
---     ISRackFirearm_perform_old(self)
--- end
-
-Events.OnWeaponSwing.Add(function(player, weapon)
-    local params = WeaponEjectionPortList[weapon:getFullType()]
-    if params then
-        spawnCasing(player, weapon, params)
-    end
-end)
+Events.OnWeaponSwing.Add(spawnCasing)
 Events.OnTick.Add(SpentCasingPhysics.update)

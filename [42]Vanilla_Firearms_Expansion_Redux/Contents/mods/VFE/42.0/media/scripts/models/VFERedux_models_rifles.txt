@@ -1,6 +1,6 @@
 module Base
 {
-    model AK47Unfolded
+	model AK47Unfolded
     {
         mesh = Weapons/firearm/AK47UnfoldedNoMag,
         texture = Weapons/firearm/ak47_folding_texture,
@@ -26,7 +26,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model AK47Folded
+	model AK47Folded
     {
         mesh = Weapons/firearm/AK47FoldedNoMag,
         texture = Weapons/firearm/ak47_folding_texture,
@@ -52,7 +52,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model AK47Solid
+	model AK47Solid
     {
         mesh = Weapons/firearm/AK47SolidNoMag,
         texture = Weapons/firearm/ak47_solid_texture,
@@ -78,7 +78,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model AK47SolidFGS
+	model AK47SolidFGS
     {
         mesh = Weapons/firearm/AK47SolidNoMag,
         texture = Weapons/firearm/ak47_solid_fiberglass_texture,
@@ -99,7 +99,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model MAK90
+	model MAK90
     {
         mesh = Weapons/firearm/MAK90NoMag,
         texture = Weapons/firearm/ak47_solid2_texture,
@@ -125,7 +125,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model MAK90FGS
+	model MAK90FGS
     {
         mesh = Weapons/firearm/MAK90NoMag,
         texture = Weapons/firearm/ak47_solid_fiberglass_texture,
@@ -146,7 +146,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model SKS
+	model SKS
     {
         mesh = Weapons/firearm/sks_model,
         texture = Weapons/firearm/sks_texture,
@@ -187,7 +187,7 @@ module Base
             rotate = -90.0000 180.0000 -180.0000,
         }
     }
-    model SKSFGS
+	model SKSFGS
     {
         mesh = Weapons/firearm/sks_model,
         texture = Weapons/firearm/sks_fiberglass_texture,
@@ -229,7 +229,7 @@ module Base
             rotate = -90.0000 180.0000 -180.0000,
         }
     }
-    model SKSSpiker
+	model SKSSpiker
     {
         mesh = Weapons/firearm/sksspiker_model,
         texture = Weapons/firearm/sks_texture,
@@ -265,7 +265,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model SKSSpikerBayonet
+	model SKSSpikerBayonet
     {
         mesh = Weapons/firearm/sksspikerbayonet_model,
         texture = Weapons/firearm/sks_texture,
@@ -301,7 +301,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model Ruger1022
+	model Ruger1022
     {
         mesh = Weapons/firearm/1022_model,
         texture = Weapons/firearm/1022_texture,
@@ -336,7 +336,7 @@ module Base
             rotate = 0.0000 180.0000 0.0000,
         }
     }
-    model ruger1022FGS
+	model ruger1022FGS
     {
         mesh = Weapons/firearm/1022_model,
         texture = Weapons/firearm/1022_fiberglass_texture,
@@ -371,7 +371,7 @@ module Base
             rotate = 0.0000 180.0000 0.0000,
         }
     }
-    model Mini14Unfolded
+	model Mini14Unfolded
     {
         mesh = Weapons/firearm/Mini14UnfoldedNoMag,
         texture = Weapons/firearm/mini14_folding_texture,
@@ -406,7 +406,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model Mini14Folded
+	model Mini14Folded
     {
         mesh = Weapons/firearm/Mini14FoldedNoMag,
         texture = Weapons/firearm/mini14_folding_texture,
@@ -437,7 +437,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model Mini14Solid
+	model Mini14Solid
     {
         mesh = Weapons/firearm/Mini14SolidNoMag,
         texture = Weapons/firearm/mini14_solid_texture,
@@ -468,7 +468,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model Mini14SolidFGS
+	model Mini14SolidFGS
     {
         mesh = Weapons/firearm/Mini14SolidNoMag,
         texture = Weapons/firearm/mini14_solid_fiberglass_texture,
@@ -499,7 +499,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model FAL
+	model FAL
     {
         mesh = Weapons/firearm/FALNoMag,
         texture = Weapons/firearm/FAL_Texture,
@@ -535,7 +535,7 @@ module Base
             rotate = -180.0000 0.0000 -180.0000,
         }
     }
-    model FALClassic
+	model FALClassic
     {
         mesh = Weapons/firearm/FALNoMag,
         texture = Weapons/firearm/FALClassic_Texture,
@@ -556,7 +556,7 @@ module Base
             rotate = -180.0000 1.0000 -180.0000,
         }
     }
-    model CAR15
+	model CAR15
     {
         mesh = Weapons/Firearm/CAR15NoMag,
         texture = Weapons/Firearm/AssaultRifle,
@@ -591,7 +591,7 @@ module Base
             rotate = 180.0000 0.0000 180.0000,
         }
     }
-    model CAR15Folded
+	model CAR15Folded
     {
         mesh = Weapons/Firearm/CAR15FoldedNoMag,
         texture = Weapons/Firearm/AssaultRifle,
@@ -626,38 +626,48 @@ module Base
             rotate = 180.0000 0.0000 180.0000,
         }
     }
-    model CAR15D
-    {
-        mesh = Weapons/Firearm/CAR15DNoMag,
-        texture = Weapons/Firearm/car15d_texture,
-        
-        attachment muzzle
-        {
-            offset = 0.0000 0.4550 0.0192,
-            rotate = -90.0000 0.0000 -180.0000,
-        }
-        attachment scope
-        {
-            offset = 0.0000 0.0412 0.0744,
-            rotate = 0.0000 0.0000 0.0000,
-        }
-        attachment reddot
-        {
-            offset = 0.0000 0.0025 0.0750,
-            rotate = 0.0000 0.0000 0.0000,
-        }
-        attachment laser
-        {
-            offset = -0.0145 0.2070 0.0188,
-            rotate = 180.0000 -90.0000 180.0000,
-        }
-        attachment world
-        {
-            offset = 0.0000 0.1300 0.0000,
-            rotate = 180.0000 0.0000 180.0000,
-        }
-    }
-    model CAR15DFolded
+	model CAR15D
+	{
+		mesh = Weapons/Firearm/CAR15DNoMag,
+		texture = Weapons/Firearm/car15d_texture,
+
+		attachment muzzle
+		{
+			offset = 0.0000 0.4550 0.0192,
+			rotate = -90.0000 0.0000 -180.0000,
+		}
+
+		attachment scope
+		{
+			offset = 0.0000 0.0412 0.0744,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+
+		attachment reddot
+		{
+			offset = 0.0000 0.0025 0.0750,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+
+		attachment laser
+		{
+			offset = -0.0145 0.2070 0.0188,
+			rotate = 180.0000 -90.0000 180.0000,
+		}
+
+		attachment world
+		{
+			offset = 0.0000 0.1300 0.0000,
+			rotate = 180.0000 0.0000 180.0000,
+		}
+
+		attachment ejectionport
+		{
+			offset = 0.0000 0.2448 0.0157,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model CAR15DFolded
     {
         mesh = Weapons/Firearm/CAR15DFoldedNoMag,
         texture = Weapons/Firearm/car15d_texture,
@@ -688,7 +698,7 @@ module Base
             rotate = 180.0000 0.0000 180.0000,
         }
     }
-    model M14
+	model M14
     {
         mesh = Weapons/Firearm/M14NoMag,
         texture = weapons/firearm/AssaultRifle02,
@@ -724,7 +734,7 @@ module Base
             rotate = -90.0000 180.0000 -180.0000,
         }
     }
-    model M14FGS
+	model M14FGS
     {
         mesh = Weapons/Firearm/M14NoMag,
         texture = weapons/firearm/AssaultRifle02_Fiberglass,
@@ -760,7 +770,7 @@ module Base
             rotate = -90.0000 180.0000 -180.0000,
         }
     }
-    model AssaultRifleM1
+	model AssaultRifleM1
     {
         mesh = Weapons/Firearm/M1_model,
         texture = weapons/firearm/AssaultRifle03,
@@ -783,7 +793,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model AssaultRifleM1_Open
+	model AssaultRifleM1_Open
     {
         mesh = Weapons/Firearm/M1open_model,
         texture = weapons/firearm/AssaultRifle03,
@@ -806,7 +816,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model AssaultRifle
+	model AssaultRifle
     {
         mesh = Weapons/Firearm/AssaultRifleNoMag,
         texture = Weapons/Firearm/AssaultRifle,
@@ -853,7 +863,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model AssaultRifleM9
+	model AssaultRifleM9
     {
         mesh = Weapons/Firearm/AssaultRifleM9NoMag,
         texture = Weapons/Firearm/AssaultRifleM9,
@@ -889,7 +899,7 @@ module Base
         }
         
     }
-    model AssaultRifleMasterkey
+	model AssaultRifleMasterkey
     {
         mesh = Weapons/Firearm/AssaultRifleMasterkeyNoMag,
         texture = Weapons/Firearm/AssaultRifleMasterkey,
@@ -930,7 +940,7 @@ module Base
             rotate = 180.0000 0.0000 180.0000,
         }
     }
-    model AssaultRifleMasterkey_Shotgun
+	model AssaultRifleMasterkey_Shotgun
     {
         mesh = Weapons/Firearm/AssaultRifleMasterkeyNoMag,
         texture = Weapons/Firearm/AssaultRifleMasterkey,
@@ -966,7 +976,7 @@ module Base
             rotate = 180.0000 0.0000 180.0000,
         }
     }
-    model M60MMG
+	model M60MMG
     {
         mesh = Weapons/Firearm/M60MMG_Empty,
         texture = Weapons/Firearm/m60mmg_texture,
@@ -1001,7 +1011,7 @@ module Base
             rotate = 180.0000 0.0000 180.0000,
         }
     }
-    model M60MMG_BP
+	model M60MMG_BP
     {
         mesh = Weapons/Firearm/M60MMG_BP_Empty,
         texture = Weapons/Firearm/m60mmg_texture,
@@ -1036,7 +1046,7 @@ module Base
             rotate = 0.0000 -90.0000 11.0000,
         }
     }
-    model HuntingRifle
+	model HuntingRifle
     {
         mesh = weapons/firearm/m788nomag_model,
         texture = weapons/firearm/m788_texture,
@@ -1077,7 +1087,7 @@ module Base
             rotate = -90.0000 180.0000 -180.0000,
         }
     }
-    model HuntingRifleFGS
+	model HuntingRifleFGS
     {
         mesh = weapons/firearm/m788nomag_model,
         texture = weapons/firearm/m788fiberglass_texture,
@@ -1118,7 +1128,7 @@ module Base
             rotate = -90.0000 180.0000 -180.0000,
         }
     }
-    model R700
+	model R700
     {
         mesh = weapons/firearm/m700_model,
         texture = weapons/firearm/m700_texture,
@@ -1159,7 +1169,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model R700FGS
+	model R700FGS
     {
         mesh = weapons/firearm/m700_model,
         texture = weapons/firearm/m700fiberglass_texture,
@@ -1200,7 +1210,7 @@ module Base
             rotate = 0.0000 0.0000 0.0000,
         }
     }
-    model M24
+	model M24
     {
         mesh = weapons/firearm/m24_model,
         texture = weapons/firearm/m24_texture,
