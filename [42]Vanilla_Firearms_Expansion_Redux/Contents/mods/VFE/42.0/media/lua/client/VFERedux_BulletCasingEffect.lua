@@ -54,11 +54,35 @@ function SpentCasingPhysics.update()
 
             local targetTileX = math.floor(worldX)
             local targetTileY = math.floor(worldY)
-            local targetSquare = getCell():getGridSquare(targetTileX, targetTileY, worldZ)
+
+            local checkZ = worldZ
+            local targetSquare = nil
+            local drops = 0
+
+            while checkZ >= 0 do
+                local sq = getCell():getGridSquare(targetTileX, targetTileY, checkZ)
+
+                if not sq then
+                    break
+                end
+
+                if sq:getFloor() then
+                    targetSquare = sq
+                    break
+                end
+
+                checkZ = checkZ - 1
+                drops = drops + 1
+            end
 
             if not targetSquare then
                 targetSquare = casing.square
+            else
+                if drops > 0 then
+                    casing.z = casing.z + drops
+                end
             end
+
 
             local localX = worldX - targetSquare:getX()
             local localY = worldY - targetSquare:getY()
@@ -143,18 +167,13 @@ function SpentCasingPhysics.doSpawnCasing(player, params, racking)
 
     local spawnWorldX = px + fx * forwardOffset + rx * sideOffset
     local spawnWorldY = py + fy * forwardOffset + ry * sideOffset
-
-    local targetTileX = math.floor(spawnWorldX)
-    local targetTileY = math.floor(spawnWorldY)
-    local targetSquare = getCell():getGridSquare(targetTileX, targetTileY, pz)
-    if not targetSquare then
-        targetSquare = player:getCurrentSquare()
-        if not targetSquare then return end
-    end
+    local targetSquare = player:getCurrentSquare()
 
     local startX = spawnWorldX - targetSquare:getX()
     local startY = spawnWorldY - targetSquare:getY()
-    local startZ = heightOffset
+
+    local stairFrac = pz - targetSquare:getZ()
+    local startZ = stairFrac + heightOffset
 
     local velX = (random_f:random(10) - 5) / 200
     local velY = (random_f:random(10) - 5) / 200

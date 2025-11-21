@@ -7,8 +7,9 @@ SpentCasingPhysics.WeaponEjectionPortParams = {
         ammo = "Base.556Bullets",
         forwardOffset = 0.30,
         sideOffset = 0.10,
+        heightOffset = 0.45,
         shellForce = 0.15,
-        heightOffset = 0.45
+        manualEjection = false
     },
 
     ["Base.CAR15D"] = {
@@ -16,8 +17,9 @@ SpentCasingPhysics.WeaponEjectionPortParams = {
         ammo = "Base.556Bullets",
         forwardOffset = 0.30,
         sideOffset = 0.10,
-        shellForce = 0.30,
-        heightOffset = 0.45
+        heightOffset = 0.45,
+        shellForce = 0.15,
+        manualEjection = false
     },
 
     ["Base.Shotgun"] = {
@@ -25,8 +27,8 @@ SpentCasingPhysics.WeaponEjectionPortParams = {
         ammo = "Base.ShotgunShells",
         forwardOffset = 0.27,
         sideOffset = 0.10,
-        shellForce = 0.15,
         heightOffset = 0.45,
+        shellForce = 0.15,
         manualEjection = true
     },
 

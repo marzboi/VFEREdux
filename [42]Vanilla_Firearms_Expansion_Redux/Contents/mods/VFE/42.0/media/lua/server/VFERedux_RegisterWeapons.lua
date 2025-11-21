@@ -5,6 +5,6 @@ SpentCasingPhysics.registerWeapon(
     0.35,
     0.10,
     0.45,
-    0.15,
+    1.00,
     false
 )
